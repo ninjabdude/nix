@@ -2,6 +2,9 @@
 My Public Nix Config
 
 # Resources
+### Tools
+https://noogle.dev/
+
 ### Reading
 https://nixos-and-flakes.thiscute.world/
 
