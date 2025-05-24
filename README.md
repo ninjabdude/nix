@@ -12,6 +12,8 @@ https://nix.dev/
 
 https://nixcloud.io/tour/?id=introduction/nix
 
+https://nixcademy.com/posts/nix-on-macos/
+
 ### Videos
 [TheAltF4Archives](https://youtube.com/playlist?list=PLOCuJim-jRbvrCSGPjQUklzSUQlLqJsl2&si=e7jojlm_6ro1QZ-A)
 
