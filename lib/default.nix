@@ -17,7 +17,7 @@ in
     in
 	inputs.home-manager.lib.homeManagerConfiguration {
 	   pkgs = inputs.nixpkgs.legacyPackages.${system};
-	   modules = [import ../users/bb.nix {inherit homeDirectory username}]; 
+	   modules = [import ../users/bb.nix {inherit homeDirectory username;}]; 
 	};
 
 
