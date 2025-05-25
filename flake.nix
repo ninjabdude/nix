@@ -6,14 +6,17 @@
 	home-manager.url = "github:nix-community/home-manager";
 	home-manager.inputs.nixpkgs.follows = "nixpkgs";
 	
-	determinate.url = "https://flakehub.com/f/DeterminateSystems/determinate/*";
     };
     
-    outputs = { self, nixpkgs, home-manager, determinate, ...}: {
-	homeConfigurations = {
-	    ninjabdude = home-manager.lib.homeManagerConfiguration{
-		pkgs = nixpkgs.legacyPackages.
-	    };
-	};
+    outputs = inputs@{ self, nixpkgs, home-manager, ...}: {
+
+        homeConfigurations = {
+          aarch64-darwin = self.lib.mkHomeManager {system = "aarch64-darwin";};
+          aarch64-linux = self.lib.mkHomeManager {system = "aarch64-linux";};
+          x86_64-darwin = self.lib.mkHomeManager {system = "x86_64-darwin";};
+          x86_64-linux = self.lib.mkHomeManager {system = "x86_64-linux";};
+        };
+
     };
+    
 }
