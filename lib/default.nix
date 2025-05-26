@@ -4,11 +4,11 @@ let
     
     defaultHomePath = "/home";
 
-    autoSystem = builtins.currentSystem;
+    impureSystem = builtins.currentSystem;
 in 
 {
     mkHomeManager = {
-	system ? autoSystem,
+	system ? impureSystem,
 	username ? defaultUsername,
     }: 
     let
