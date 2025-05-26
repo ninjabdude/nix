@@ -6,13 +6,13 @@ let
 
     impureSystem = builtins.currentSystem;
 
-    defaultConfig = "bb";
+    defaultProfile = "bb";
 in 
 {
     mkHomeManager = {
 	system ? impureSystem,
 	username ? defaultUsername,
-	config ? defaultConfig, 
+	profile ? defaultProfile, 
     }: 
     let
 	homeDirectory =
@@ -22,7 +22,7 @@ in
     in
 	inputs.home-manager.lib.homeManagerConfiguration {
 	   pkgs = inputs.nixpkgs.legacyPackages.${system};
-	   modules = [(import ../users/${config}.nix { inherit homeDirectory username; })]; 
+	   modules = [(import ../profiles/${profile}.nix { inherit homeDirectory username system; })]; 
 	};
 
 
