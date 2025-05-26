@@ -10,6 +10,7 @@
     
     outputs = inputs@{ self, nixpkgs, home-manager, ...}: {
 
+	lib = import ./lib {inherit inputs;};
 
         homeConfigurations = {
           aarch64-darwin = self.lib.mkHomeManager {system = "aarch64-darwin";};
@@ -18,7 +19,6 @@
           x86_64-linux = self.lib.mkHomeManager {system = "x86_64-linux";};
         };
 
-	lib = import ./lib {inherit inputs;};
     };
     
 }
