@@ -22,7 +22,7 @@ in
     in
 	inputs.home-manager.lib.homeManagerConfiguration {
 	   pkgs = inputs.nixpkgs.legacyPackages.${system};
-	   modules = [(import ../profiles/${profile}.nix { inherit homeDirectory username system; })]; 
+	   modules = [(import ../home-profiles/${profile}.nix { inherit homeDirectory username system; })]; 
 	};
 
 
