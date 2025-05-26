@@ -5,11 +5,14 @@ let
     defaultHomePath = "/home";
 
     impureSystem = builtins.currentSystem;
+
+    defaultConfig = "bb";
 in 
 {
     mkHomeManager = {
 	system ? impureSystem,
 	username ? defaultUsername,
+	config ? defaultConfig, 
     }: 
     let
 	homeDirectory =
@@ -19,7 +22,7 @@ in
     in
 	inputs.home-manager.lib.homeManagerConfiguration {
 	   pkgs = inputs.nixpkgs.legacyPackages.${system};
-	   modules = [(import ../users/bb.nix { inherit homeDirectory username; })]; 
+	   modules = [(import ../users/${config}.nix { inherit homeDirectory username; })]; 
 	};
 
 
