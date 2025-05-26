@@ -12,7 +12,7 @@ in
     mkHomeManager = {
 	system ? impureSystem,
 	username ? defaultUsername,
-	profile ? defaultProfile, 
+	homeProfile ? defaultProfile, 
     }: 
     let
 	homeDirectory =
@@ -22,7 +22,7 @@ in
     in
 	inputs.home-manager.lib.homeManagerConfiguration {
 	   pkgs = inputs.nixpkgs.legacyPackages.${system};
-	   modules = [(import ../home-profiles/${profile}.nix { inherit homeDirectory username system; })]; 
+	   modules = [(import ../home-profiles/${homeProfile}.nix { inherit homeDirectory username system; })]; 
 	};
 
 
