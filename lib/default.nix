@@ -3,10 +3,12 @@ let
     defaultUsername = "bb";
     
     defaultHomePath = "/home";
+
+    autoSystem = builtins.currentSystem;
 in 
 {
     mkHomeManager = {
-	system,
+	system ? autoSystem,
 	username ? defaultUsername,
     }: 
     let
