@@ -4,7 +4,7 @@ let
     
     defaultHomePath = "/home";
 
-    impureSystem = builtins.currentSystem;
+    impureSystem = builtins.currentSystem; #must use with --impure flag 
 
     defaultProfile = "bb";
 in 
