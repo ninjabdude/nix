@@ -5,6 +5,8 @@ My Public Nix Config
 ### Tools
 https://noogle.dev/
 
+https://home-manager-options.extranix.com/
+
 ### Reading
 https://nixos-and-flakes.thiscute.world/
 
