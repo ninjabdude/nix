@@ -11,6 +11,7 @@
 
 
     # editMode = true;
-    home.file."${config.home.homeDirectory}/.config/tmux/tmux.conf".source = 
-	config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nix/home/modules/tmux/tmux.conf";
+    home.file."${config.home.homeDirectory}/.config/tmux/tmux.conf".source =  
+	# config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nix/home/modules/tmux/tmux.conf";
+	"${config.home.homeDirectory}/nix/home/modules/tmux/tmux.conf";
 }
