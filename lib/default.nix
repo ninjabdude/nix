@@ -16,7 +16,7 @@ in
 	# homeSetup ? "standalone",
     }: 
     let
-    homeOptions = {
+    homeLib = {
 	inherit 
 	    username
 	    system;
@@ -31,7 +31,7 @@ in
 	inputs.home-manager.lib.homeManagerConfiguration {
 	   pkgs = inputs.nixpkgs.legacyPackages.${system};
 	   modules = [(import ../home/profiles/${homeProfile}.nix )]; 
-	   extraSpecialArgs = {inherit homeOptions;};
+	   extraSpecialArgs = {inherit homeLib;};
 	};
 
 

@@ -1,6 +1,6 @@
-{config, lib, pkgs, homeOptions, ...}: {
-    home.homeDirectory = homeOptions.homeDirectory;
-    home.username = homeOptions.username;
+{config, lib, pkgs, homeLib, ...}: {
+    home.homeDirectory = homeLib.homeDirectory;
+    home.username = homeLib.username;
     home.packages = with pkgs; [fastfetch home-manager tmux];
     home.stateVersion = "24.11";
 
