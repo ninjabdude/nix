@@ -13,16 +13,25 @@ in
 	system ? impureSystem,
 	username ? defaultUsername,
 	homeProfile ? defaultProfile, 
+	# homeSetup ? "standalone",
     }: 
     let
+    homeOptions = {
+	inherit 
+	    username
+	    system;
+
 	homeDirectory =
 	    if system == "aarch64-darwin" || system == "x86_64-darwin"
-	    then "/Users/${username}"
+		then "/Users/${username}"
 	    else "${defaultHomePath}/${username}";
+    };
+
     in
 	inputs.home-manager.lib.homeManagerConfiguration {
 	   pkgs = inputs.nixpkgs.legacyPackages.${system};
-	   modules = [(import ../home/profiles/${homeProfile}.nix { inherit homeDirectory username system; })]; 
+	   modules = [(import ../home/profiles/${homeProfile}.nix )]; 
+	   extraSpecialArgs = {inherit homeOptions;};
 	};
 
 
