@@ -13,7 +13,7 @@
 	lib = import ./lib {inherit inputs;};
 
         homeConfigurations = {	
-          bb = self.lib.mkHomeManager {}; # --impure
+          bb = self.lib.mkHomeManager {editMode = false;}; # --impure
           aarch64-darwin = self.lib.mkHomeManager {system = "aarch64-darwin";};
           aarch64-linux = self.lib.mkHomeManager {system = "aarch64-linux";};
           x86_64-darwin = self.lib.mkHomeManager {system = "x86_64-darwin";};

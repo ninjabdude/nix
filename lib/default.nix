@@ -29,7 +29,7 @@ in
 		then "/Users/${username}"
 	    else "${defaultHomePath}/${username}";
 
-	symlinkFile =let inherit editMode; in{source, config, lib, }:  
+	sourceFile =let inherit editMode; in{source, config, lib, }:  
 	if editMode
 	then config.lib.file.mkOutOfStoreSymlink source
 	else source;

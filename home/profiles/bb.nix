@@ -10,7 +10,7 @@
 	#     then config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/${sourcePath}"
 	# else "${config.home.homeDirectory}/${sourcePath}"
     home.file."${homeLib.homeDirectory}/.config/tmux/tmux.conf".source = 
-	homeLib.symlinkFile {
+	homeLib.sourceFile {
 	    source = "${homeLib.homeDirectory}/nix/home/modules/tmux/tmux.conf"; 
 	    inherit lib config;
 	};
