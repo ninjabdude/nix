@@ -13,18 +13,22 @@ in
 	system ? impureSystem,
 	username ? defaultUsername,
 	homeProfile ? defaultProfile, 
+	# editMode ? True,
 	# homeSetup ? "standalone",
     }: 
     let
-    homeLib = {
+    homeLib = rec{
 	inherit 
+	    system
 	    username
-	    system;
+	    homeProfile;
+	    # editMode;
 
 	homeDirectory =
 	    if system == "aarch64-darwin" || system == "x86_64-darwin"
 		then "/Users/${username}"
 	    else "${defaultHomePath}/${username}";
+	
     };
 
     in
