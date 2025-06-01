@@ -1,12 +1,12 @@
 {inputs}:
 let
-defaultUsername = "bb";
+    defaultUsername = "bb";
+    
+    defaultHomePath = "/home";
 
-defaultHomePath = "/home";
+    impureSystem = builtins.currentSystem; #must use with --impure flag 
 
-impureSystem = builtins.currentSystem; #must use with --impure flag 
-
-defaultProfile = "bb";
+    defaultProfile = "bb";
 in 
 {
     mkHomeManager = {
@@ -14,32 +14,32 @@ in
 	username ? defaultUsername,
 	homeProfile ? defaultProfile, 
 	editMode ? true,
-# homeSetup ? "standalone",
+	# homeSetup ? "standalone",
     }: 
     let
-	homeLib = rec{
-	    inherit 
-		system
-		username
-		editMode
-		homeProfile;
+    homeLib = rec{
+	inherit 
+	    system
+	    username
+	    editMode
+	    homeProfile;
 
-	    homeDirectory =
-		if system == "aarch64-darwin" || system == "x86_64-darwin"
-		    then "/Users/${username}"
-		else "${defaultHomePath}/${username}";
+	homeDirectory =
+	    if system == "aarch64-darwin" || system == "x86_64-darwin"
+		then "/Users/${username}"
+	    else "${defaultHomePath}/${username}";
 
-	    sourceFile =let inherit editMode; in{source, lib, }:  
-		if editMode
-		    then lib.file.mkOutOfStoreSymlink source
-		else source;
-	};
+	sourceFile =let inherit editMode; in{source, lib, config, }:  
+	if editMode == true
+	then config.lib.file.mkOutOfStoreSymlink source
+	else source;
+    };
 
     in
 	inputs.home-manager.lib.homeManagerConfiguration {
-	    pkgs = inputs.nixpkgs.legacyPackages.${system};
-	    modules = [(import ../home/profiles/${homeProfile}.nix )]; 
-	    extraSpecialArgs = {inherit homeLib;};
+	   pkgs = inputs.nixpkgs.legacyPackages.${system};
+	   modules = [(import ../home/profiles/${homeProfile}.nix )]; 
+	   extraSpecialArgs = {inherit homeLib;};
 	};
 
 

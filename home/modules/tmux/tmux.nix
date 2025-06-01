@@ -5,6 +5,6 @@
     home.file."${homeLib.homeDirectory}/.config/tmux/tmux.conf".source = 
 	homeLib.sourceFile {
 	    source = "${homeLib.homeDirectory}/nix/home/modules/tmux/tmux.conf"; 
-	    inherit lib;
+	    inherit lib config;
 	};
 }
