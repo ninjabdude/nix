@@ -1,5 +1,5 @@
 {config, lib, pkgs, homeLib, ...}: {
-    home.stateVersion = "24.11";
+    home.stateVersion = "25.05";
     home.homeDirectory = homeLib.homeDirectory;
     home.username = homeLib.username;
 
