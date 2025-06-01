@@ -12,13 +12,14 @@
     home.file."${homeLib.homeDirectory}/.config/tmux/tmux.conf".source = 
 	homeLib.sourceFile {
 	    source = "${homeLib.homeDirectory}/nix/home/modules/tmux/tmux.conf"; 
-	    inherit lib config;
+	    inherit lib;
 	};
 
 # make a funciton that will be called like home.file = fucntion,
 # this function will be called sourceConfigFile and take the args {editMode sourcePath targetPath}
 # then will either mkoutofstoresymlink or not
 
+	# home.file =
 	# "${config.home.homeDirectory}/.config/tmux/tmux.conf".source =  
 	# config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nix/home/modules/tmux/tmux.conf";
 	# "${config.home.homeDirectory}/nix/home/modules/tmux/tmux.conf";

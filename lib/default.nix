@@ -29,9 +29,9 @@ in
 		then "/Users/${username}"
 	    else "${defaultHomePath}/${username}";
 
-	sourceFile =let inherit editMode; in{source, config, lib, }:  
+	sourceFile =let inherit editMode; in{source, lib, }:  
 	if editMode
-	then config.lib.file.mkOutOfStoreSymlink source
+	then lib.file.mkOutOfStoreSymlink source
 	else source;
     };
 
