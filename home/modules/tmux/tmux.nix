@@ -2,9 +2,11 @@
 
     home.packages = [pkgs.tmux];
 
-    home.file."${homeLib.homeDirectory}/.config/tmux/tmux.conf".source = 
+    home.file."${homeLib.homeDirectory}/.config/tmux/custom.conf".source = 
 	homeLib.sourceFile {
 	    source = "${homeLib.homeDirectory}/nix/home/modules/tmux/tmux.conf"; 
 	    inherit lib config;
 	};
+    programs.tmux.enable = true;
+    programs.tmux.extraConfig = "source-file ${homeLib.homeDirectory}/.config/tmux/custom.conf";
 }
