@@ -13,7 +13,7 @@ in
 	system ? impureSystem,
 	username ? defaultUsername,
 	homeProfile ? defaultProfile, 
-	# editMode ? True,
+	editMode ? true,
 	# homeSetup ? "standalone",
     }: 
     let
@@ -21,14 +21,16 @@ in
 	inherit 
 	    system
 	    username
+	    editMode
 	    homeProfile;
-	    # editMode;
 
 	homeDirectory =
 	    if system == "aarch64-darwin" || system == "x86_64-darwin"
 		then "/Users/${username}"
 	    else "${defaultHomePath}/${username}";
-	
+
+	symlinkFile = { source, config, lib, }:  
+	    config.lib.file.mkOutOfStoreSymlink source;
     };
 
     in
