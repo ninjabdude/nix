@@ -3,7 +3,7 @@
     home.packages = [pkgs.tmux];
 
     home.file."${homeLib.homeDirectory}/.config/tmux/custom.conf".source = 
-	homeLib.sourceFile {
+	homeLib.mkSource {
 	    source = "${homeLib.homeDirectory}/nix/home/modules/tmux/tmux.conf"; 
 	    inherit lib config;
 	};
