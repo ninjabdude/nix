@@ -1,5 +1,4 @@
 source ~/.config/zsh/aliases.zsh
-export STARSHIP_CONFIG=~/.config/starship.toml
 
 
 # Setup a custom completions directory
@@ -32,7 +31,4 @@ bindkey -M vicmd '^f' sesh-sessions
 bindkey -M viins '^f' sesh-sessions
 
 
-source ~/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-eval "$(starship init zsh)"
 eval "$(zoxide init --cmd cd zsh)"

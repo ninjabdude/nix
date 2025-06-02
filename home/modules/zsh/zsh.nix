@@ -1,7 +1,5 @@
 {config,lib,pkgs,homeLib, ...}:{
 
-    home.packages = [pkgs.zsh];
-
     home.file."${homeLib.homeDirectory}/.config/zsh/".source = 
 	homeLib.mkSource {
 	    source = "${homeLib.homeDirectory}/nix/home/modules/zsh/config/"; 
@@ -10,8 +8,14 @@
 
    programs.zsh = {
        enable = true;
+       syntaxHighlighting.enable = true;
        
        initContent = "source ${homeLib.homeDirectory}/.config/zsh/custom.zsh";
    };
+
+    programs.starship = {
+	enable = true;
+	enableZshIntegration = true;
+    };
 
 }
