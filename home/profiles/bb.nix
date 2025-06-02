@@ -7,6 +7,7 @@
 
     imports = [
 	../modules/tmux/tmux.nix			
+	../modules/zsh/zsh.nix
     ];
 
 
