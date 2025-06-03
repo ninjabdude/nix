@@ -6,5 +6,7 @@
 	../modules/starship.nix
 	../modules/zoxide.nix
 	../modules/fzf.nix
+	../modules/sesh.nix
+
     ];
 }

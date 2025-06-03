@@ -11,7 +11,7 @@ source ~/.config/zsh/aliases.zsh
 # compinit -i
 
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 
 function sesh-sessions() {
@@ -31,4 +31,4 @@ bindkey -M vicmd '^f' sesh-sessions
 bindkey -M viins '^f' sesh-sessions
 
 
-eval "$(zoxide init --cmd cd zsh)"
+# eval "$(zoxide init --cmd cd zsh)"
