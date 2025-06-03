@@ -9,5 +9,6 @@
 	../modules/sesh.nix
 	# ../modules/ghostty/ghostty.nix
 
+	../modules/wezterm/wezterm.nix
     ];
 }
