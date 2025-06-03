@@ -1,0 +1,10 @@
+
+font-size = 20
+font-family = JetBrains Mono
+
+theme = Dark Pastel
+cursor-color = #00EE00
+cursor-opacity = 0.8
+background = 000000
+
+clipboard-paste-protection = true

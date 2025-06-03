@@ -7,6 +7,7 @@
 	../modules/zoxide.nix
 	../modules/fzf.nix
 	../modules/sesh.nix
+	# ../modules/ghostty/ghostty.nix
 
     ];
 }
