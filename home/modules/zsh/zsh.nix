@@ -12,10 +12,4 @@
        
        initContent = "source ${homeLib.homeDirectory}/.config/zsh/custom.zsh";
    };
-
-    programs.starship = {
-	enable = true;
-	enableZshIntegration = true;
-    };
-
 }

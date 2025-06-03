@@ -23,3 +23,10 @@ https://nixcademy.com/posts/nix-on-macos/
 
 ### Example Repo's
 https://code.m3ta.dev/m3tam3re/nixcfg
+
+#To Do 
+
+fzf
+zoxide
+sesh
+
