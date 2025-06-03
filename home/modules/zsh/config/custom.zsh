@@ -2,13 +2,13 @@ source ~/.config/zsh/aliases.zsh
 
 
 # Setup a custom completions directory
-fpath=(~/.config/zsh/completions $fpath)
+# fpath=(~/.config/zsh/completions $fpath)
 
 # Enable the completion system
-autoload compinit
+# autoload compinit
 
 # Initialize all completions on $fpath and ignore (-i) all insecure files and directories
-compinit -i
+# compinit -i
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
