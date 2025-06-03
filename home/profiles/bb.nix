@@ -6,9 +6,7 @@
     home.packages = with pkgs; [home-manager fastfetch];
 
     imports = [
-	../modules/tmux/tmux.nix			
-	../modules/zsh/zsh.nix
-	../modules/starship.nix
+	../bundles/terminal.nix
     ];
 
 
