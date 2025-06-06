@@ -1,17 +1,13 @@
-{
-    homeDirectory,
-	username,
-	system,
-}: {config, lib, pkgs, ...}: {
-    home.homeDirectory = homeDirectory;
-    home.username = username;
-    home.packages = with pkgs; [fastfetch home-manager tmux];
-    home.stateVersion = "24.11";
+{config, lib, pkgs, homeLib, ...}: {
+    home.stateVersion = "25.05";
+    home.homeDirectory = homeLib.homeDirectory;
+    home.username = homeLib.username;
+
+    home.packages = with pkgs; [home-manager fastfetch];
+
+    imports = [
+	../bundles/terminal.nix
+    ];
 
 
-
-    # editMode = true;
-    home.file."${config.home.homeDirectory}/.config/tmux/tmux.conf".source =  
-	# config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nix/home/modules/tmux/tmux.conf";
-	"${config.home.homeDirectory}/nix/home/modules/tmux/tmux.conf";
 }
