@@ -5,7 +5,7 @@
 	nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
 	home-manager.url = "github:nix-community/home-manager";
 	home-manager.inputs.nixpkgs.follows = "nixpkgs";
-	
+	nixCats.url = "github:BirdeeHub/nixCats-nvim";
     };
     
     outputs = inputs@{ self, nixpkgs, home-manager, ...}: {

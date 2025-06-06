@@ -7,6 +7,8 @@ let
     impureSystem = builtins.currentSystem; #must use with --impure flag 
 
     defaultProfile = "bb";
+
+    inherit inputs;
 in 
 {
     mkHomeManager = {
@@ -19,6 +21,7 @@ in
     let
     homeLib = rec{
 	inherit 
+	    inputs
 	    system
 	    username
 	    editMode
