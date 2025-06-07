@@ -139,8 +139,8 @@ in {
           settings = {
             suffix-path = true;
             suffix-LD = true;
-            wrapRc = true;
-            # unwrappedCfgPath = "/path/to/here";
+            wrapRc = !homeLib.editMode;
+            unwrappedCfgPath = "${homeLib.homeDirectory}/nix/home/modules/nvim";
             # IMPORTANT:
             # your alias may not conflict with your other packages.
             aliases = [ "vim" "homeVim" ];
