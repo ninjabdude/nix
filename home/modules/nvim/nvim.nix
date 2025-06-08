@@ -98,35 +98,6 @@ in {
             nvim-dap-virtual-text
           ];
         };
-
-        # shared libraries to be added to LD_LIBRARY_PATH
-        # variable available to nvim runtime
-        sharedLibraries = {
-          general = with pkgs; [ ];
-        };
-
-        # environmentVariables:
-        # this section is for environmentVariables that should be available
-        # at RUN TIME for plugins. Will be available to path within neovim terminal
-        environmentVariables = {
-          # test = {
-          #   CATTESTVAR = "It worked!";
-          # };
-        };
-
-        # categories of the function you would have passed to withPackages
-        python3.libraries = {
-          # test = [ (_:[]) ];
-        };
-
-        # If you know what these are, you can provide custom ones by category here.
-        # If you dont, check this link out:
-        # https://github.com/NixOS/nixpkgs/blob/master/pkgs/build-support/setup-hooks/make-wrapper.sh
-        extraWrapperArgs = {
-          # test = [
-          #   '' --set CATTESTVAR2 "It worked again!"''
-          # ];
-        };
       });
 
       # see :help nixCats.flake.outputs.packageDefinitions
@@ -137,8 +108,6 @@ in {
           # they contain a settings set defined above
           # see :help nixCats.flake.outputs.settings
           settings = {
-            suffix-path = true;
-            suffix-LD = true;
             wrapRc = !homeLib.editMode;
             unwrappedCfgPath = "${homeLib.homeDirectory}/nix/home/modules/nvim";
             # IMPORTANT:
@@ -167,8 +136,6 @@ in {
           # they contain a settings set defined above
           # see :help nixCats.flake.outputs.settings
           settings = {
-            suffix-path = true;
-            suffix-LD = true;
             wrapRc = !homeLib.editMode;
             unwrappedCfgPath = "${homeLib.homeDirectory}/nix/home/modules/nvim";
             # IMPORTANT:
