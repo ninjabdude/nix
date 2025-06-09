@@ -3,6 +3,7 @@
   utils = inputs.nixCats.utils;
 in {
   imports = [
+    ./cli.nix
     inputs.nixCats.homeModule
   ];
   config = {
@@ -124,7 +125,7 @@ in {
             general = true;
             lua = true;
             nix = true;
-            go = false;
+            go = true;
           };
           # anything else to pass and grab in lua with `nixCats.extra`
           extra = {
@@ -152,7 +153,7 @@ in {
             general = true;
             lua = true;
             nix = true;
-            go = false;
+            go = true;
           };
           # anything else to pass and grab in lua with `nixCats.extra`
           extra = {
@@ -162,5 +163,5 @@ in {
 
       };
     };
-  };
+  }; 
 }
