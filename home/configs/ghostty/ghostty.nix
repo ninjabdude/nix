@@ -3,7 +3,7 @@
 	#
 	#    home.file."${homeLib.homeDirectory}/.config/ghostty/".source = 
 	# homeLib.mkSource {
-	#     source = "${homeLib.homeDirectory}/nix/home/modules/ghostty/config/"; 
+	#     source = "${homeLib.homeDirectory}/nix/home/configs/ghostty/config/"; 
 	#     inherit lib config;
 	# };
 

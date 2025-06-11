@@ -2,7 +2,7 @@
 
     home.file."${homeLib.homeDirectory}/.config/wezterm/".source = 
 	homeLib.mkSource {
-	    source = "${homeLib.homeDirectory}/nix/home/modules/wezterm/config/"; 
+	    source = "${homeLib.homeDirectory}/nix/home/configs/wezterm/config/"; 
 	    inherit lib config;
 	};
 

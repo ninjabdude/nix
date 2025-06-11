@@ -3,7 +3,7 @@
 
     home.file."${homeLib.homeDirectory}/.config/tmux/custom.conf".source = 
 	homeLib.mkSource {
-	    source = "${homeLib.homeDirectory}/nix/home/modules/tmux/tmux.conf"; 
+	    source = "${homeLib.homeDirectory}/nix/home/configs/tmux/tmux.conf"; 
 	    inherit lib config;
 	};
     programs.tmux = {

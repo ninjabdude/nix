@@ -1,14 +1,14 @@
 {config,lib,pkgs,homeLib, ...}:{
 
     imports = [
-	../modules/tmux/tmux.nix			
-	../modules/zsh/zsh.nix
-	../modules/starship.nix
-	../modules/fzf.nix
-	../modules/zoxide.nix
-	../modules/sesh.nix
-	# ../modules/ghostty/ghostty.nix
-	../modules/wezterm/wezterm.nix
-	../modules/nvim/nvim.nix
+	../configs/tmux/tmux.nix			
+	../configs/zsh/zsh.nix
+	../configs/starship.nix
+	../configs/fzf.nix
+	../configs/zoxide.nix
+	../configs/sesh.nix
+	# ../configs/ghostty/ghostty.nix
+	../configs/wezterm/wezterm.nix
+	../configs/nvim/nvim.nix
     ];
 }

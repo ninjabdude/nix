@@ -110,7 +110,7 @@ in {
           # see :help nixCats.flake.outputs.settings
           settings = {
             wrapRc = !homeLib.editMode;
-            unwrappedCfgPath = "${homeLib.homeDirectory}/nix/home/modules/nvim";
+            unwrappedCfgPath = "${homeLib.homeDirectory}/nix/home/configs/nvim";
             # IMPORTANT:
             # your alias may not conflict with your other packages.
             aliases = [ "homeVim" ];
@@ -138,7 +138,7 @@ in {
           # see :help nixCats.flake.outputs.settings
           settings = {
             wrapRc = !homeLib.editMode;
-            unwrappedCfgPath = "${homeLib.homeDirectory}/nix/home/modules/nvim";
+            unwrappedCfgPath = "${homeLib.homeDirectory}/nix/home/configs/nvim";
             # IMPORTANT:
             # your alias may not conflict with your other packages.
             aliases = [ "testVim" ];

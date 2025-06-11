@@ -2,7 +2,7 @@
 
     home.file."${homeLib.homeDirectory}/.config/zsh/".source = 
 	homeLib.mkSource {
-	    source = "${homeLib.homeDirectory}/nix/home/modules/zsh/config/"; 
+	    source = "${homeLib.homeDirectory}/nix/home/configs/zsh/config/"; 
 	    inherit lib config;
 	};
 
