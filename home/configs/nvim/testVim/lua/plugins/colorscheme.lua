@@ -1,0 +1,19 @@
+return{
+	{
+	  "bluz71/vim-moonfly-colors",
+	  enabled = true,
+	  name = "moonfly",
+	  lazy = false,
+	  priority = 1000,
+	  config = function()
+	      require("moonfly").custom_colors({
+		  grey0 = "#44475a"
+	      })
+	      vim.cmd [[colorscheme moonfly]]
+
+	      -- vim.api.nvim_set_hl(0, "Visual", { bg = "#44475a" })
+
+	      vim.api.nvim_set_hl(0, "MatchParen", { bg = "#a688ff", fg = "#000000", bold = true })
+	  end
+      },
+  }
