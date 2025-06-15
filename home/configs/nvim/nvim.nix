@@ -3,7 +3,7 @@
   utils = inputs.nixCats.utils;
 in {
   imports = [
-    ./cli.nix
+    ./extra.nix
     inputs.nixCats.homeModule
   ];
   config = {
@@ -137,8 +137,8 @@ in {
           # they contain a settings set defined above
           # see :help nixCats.flake.outputs.settings
           settings = {
-            wrapRc = !homeLib.editMode;
-            unwrappedCfgPath = "${homeLib.homeDirectory}/nix/home/configs/nvim";
+            wrapRc = false;
+            unwrappedCfgPath = "${homeLib.homeDirectory}/.config/nvim";
             # IMPORTANT:
             # your alias may not conflict with your other packages.
             aliases = [ "testVim" ];
