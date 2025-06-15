@@ -63,40 +63,19 @@ in {
         # This is for plugins that will load at startup without using packadd:
         startupPlugins = {
           general = with pkgs.vimPlugins; [
-            # lazy loading isnt required with a config this small
-            # but as a demo, we do it anyway.
-            lze
-            lzextras
-            snacks-nvim
-            onedark-nvim
-            vim-sleuth
+	    lz-n
           ];
         };
 
         # not loaded automatically at startup.
         # use with packadd and an autocommand in config to achieve lazy loading
         optionalPlugins = {
-          go = with pkgs.vimPlugins; [
-            nvim-dap-go
-          ];
-          lua = with pkgs.vimPlugins; [
-            lazydev-nvim
-          ];
           general = with pkgs.vimPlugins; [
+            lazydev-nvim
             mini-nvim
-            nvim-lspconfig
-            vim-startuptime
-            blink-cmp
-            nvim-treesitter.withAllGrammars
-            lualine-nvim
-            lualine-lsp-progress
             gitsigns-nvim
             which-key-nvim
-            nvim-lint
-            conform-nvim
-            nvim-dap
-            nvim-dap-ui
-            nvim-dap-virtual-text
+	    oil-nvim
           ];
         };
       });
