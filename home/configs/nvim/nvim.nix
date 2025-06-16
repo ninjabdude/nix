@@ -77,7 +77,10 @@ in {
             which-key-nvim
 	    oil-nvim
           ];
-        };
+	  vimExtras = with pkgs; [
+	      nur.repos.m15a.vimExtraPlugins.vim-moonfly-colors
+	  ];
+	};
       });
 
       # see :help nixCats.flake.outputs.packageDefinitions
@@ -103,6 +106,7 @@ in {
           # and a set of categories that you want
           categories = {
             general = true;
+	    vimExtras = true;
             lua = true;
             nix = true;
             go = true;
@@ -132,6 +136,7 @@ in {
           # and a set of categories that you want
           categories = {
             general = true;
+	    vimExtras = true;
             lua = true;
             nix = true;
             go = true;

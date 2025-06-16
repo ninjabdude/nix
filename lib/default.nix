@@ -42,7 +42,10 @@ in
     in
 	inputs.home-manager.lib.homeManagerConfiguration {
 	   pkgs = inputs.nixpkgs.legacyPackages.${system};
-	   modules = [(import ../home/profiles/${homeProfile}.nix )]; 
+	   modules = [
+	       (import ../home/profiles/${homeProfile}.nix ) 
+	       (inputs.nur.modules.homeManager.default)
+	   ]; 
 	   extraSpecialArgs = {inherit homeLib;};
 	};
 
