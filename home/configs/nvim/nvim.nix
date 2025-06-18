@@ -76,9 +76,10 @@ in {
             gitsigns-nvim
             which-key-nvim
 	    oil-nvim
+	    mini-nvim
           ];
 	  vimExtras = with pkgs; [
-	      nur.repos.m15a.vimExtraPlugins.vim-moonfly-colors
+	      # nur.repos.m15a.vimExtraPlugins.vim-moonfly-colors
 	  ];
 	};
       });
