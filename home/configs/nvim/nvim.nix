@@ -77,6 +77,8 @@ in {
             which-key-nvim
 	    oil-nvim
 	    mini-nvim
+	    rose-pine
+	    dracula-nvim
           ];
 	  vimExtras = with pkgs; [
 	      # nur.repos.m15a.vimExtraPlugins.vim-moonfly-colors
