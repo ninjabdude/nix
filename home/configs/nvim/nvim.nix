@@ -77,11 +77,15 @@ in {
             which-key-nvim
 	    oil-nvim
 	    mini-nvim
-	    rose-pine
-	    dracula-nvim
+	    dracula-nvim 
+
+	    telescope-nvim
+	    plenary-nvim
+	    telescope-fzf-native-nvim
+	    telescope-ui-select-nvim
+	    nvim-web-devicons
           ];
 	  vimExtras = with pkgs; [
-	      # nur.repos.m15a.vimExtraPlugins.vim-moonfly-colors
 	  ];
 	};
       });
