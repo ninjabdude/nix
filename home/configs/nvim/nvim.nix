@@ -63,7 +63,13 @@ in {
         # This is for plugins that will load at startup without using packadd:
         startupPlugins = {
           general = with pkgs.vimPlugins; [
-	    lz-n
+	      lz-n
+
+	      plenary-nvim
+	      telescope-fzf-native-nvim
+	      telescope-ui-select-nvim
+	      nvim-web-devicons
+
           ];
         };
 
@@ -80,11 +86,7 @@ in {
 	    dracula-nvim 
 
 	    telescope-nvim
-	    plenary-nvim
-	    telescope-fzf-native-nvim
-	    telescope-ui-select-nvim
-	    nvim-web-devicons
-          ];
+	              ];
 	  vimExtras = with pkgs; [
 	  ];
 	};
