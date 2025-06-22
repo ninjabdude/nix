@@ -84,8 +84,8 @@ in {
 	    oil-nvim
 	    mini-nvim
 	    dracula-nvim 
-
 	    telescope-nvim
+	    nvim-treesitter.withAllGrammars
 	              ];
 	  vimExtras = with pkgs; [
 	  ];
