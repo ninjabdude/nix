@@ -6,7 +6,7 @@
     home.packages = with pkgs; [home-manager fastfetch];
 
     imports = [
-	../bundles/terminal.nix
+	../bundles/dev.nix
     ];
 
 
