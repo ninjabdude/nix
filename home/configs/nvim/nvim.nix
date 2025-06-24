@@ -80,6 +80,7 @@ in {
             lazydev-nvim
             mini-nvim
             gitsigns-nvim
+	    undotree
             which-key-nvim
 	    oil-nvim
 	    mini-nvim
