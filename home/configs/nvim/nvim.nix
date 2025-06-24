@@ -39,24 +39,18 @@ in {
         # this includes LSPs
         lspsAndRuntimeDeps = {
           general = with pkgs; [
-            lazygit
-          ];
-          lua = with pkgs; [
-            lua-language-server
-            stylua
-          ];
-          nix = with pkgs; [
-            nixd
-            alejandra
-          ];
-          go = with pkgs; [
-            gopls
+            lazygit 
+	    gopls
             delve
             golint
             golangci-lint
             gotools
             go-tools
             go
+	    nixd
+            alejandra
+            lua-language-server
+            stylua
           ];
         };
 
@@ -69,6 +63,7 @@ in {
 	      telescope-fzf-native-nvim
 	      telescope-ui-select-nvim
 	      nvim-web-devicons
+	      friendly-snippets
 
           ];
         };
@@ -87,6 +82,7 @@ in {
 	    dracula-nvim 
 	    telescope-nvim
 	    nvim-treesitter.withAllGrammars
+	    blink-cmp
 	              ];
 	  vimExtras = with pkgs; [
 	  ];
@@ -117,9 +113,6 @@ in {
           categories = {
             general = true;
 	    vimExtras = true;
-            lua = true;
-            nix = true;
-            go = true;
           };
           # anything else to pass and grab in lua with `nixCats.extra`
           extra = {
@@ -136,7 +129,7 @@ in {
 	    configDirName = "testVim";
             # IMPORTANT:
             # your alias may not conflict with your other packages.
-            aliases = [ "testVim" ];
+            aliases = [ "testVim" "tvim"];
             # neovim-unwrapped = inputs.neovim-nightly-overlay.packages.${pkgs.system}.neovim;
             hosts.python3.enable = true;
             hosts.node.enable = true;
@@ -147,9 +140,6 @@ in {
           categories = {
             general = true;
 	    vimExtras = true;
-            lua = true;
-            nix = true;
-            go = true;
           };
           # anything else to pass and grab in lua with `nixCats.extra`
           extra = {
