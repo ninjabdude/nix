@@ -6,7 +6,9 @@ alias lia='ls -lia'
 alias reload-zsh='source ~/.zshrc'
 
 #NeoVim Alias's
-alias newvim="NVIM_APPNAME=newvim nvim"
+alias dotvim="NVIM_APPNAME=dotvim nvim"
 alias oldvim="NVIM_APPNAME=oldvim nvim"
+# alias nvim="svim"
+alias vim="svim"
 
 

@@ -20,6 +20,7 @@
 	gcc
 	lua
 	go
+	rustup
     ];
 
     programs.go.enable = true;
