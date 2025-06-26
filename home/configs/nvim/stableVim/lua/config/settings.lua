@@ -6,6 +6,7 @@ vim.opt.relativenumber = true
 vim.opt.clipboard = "unnamedplus"
 vim.opt.undofile = true -- Save undo history
 vim.g.mapleader = " "
+vim.o.scrolloff = 10
 
 -- Highlight when yanking (copying) text
 --  Try it with `yap` in normal mode
