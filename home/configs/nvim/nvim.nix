@@ -84,9 +84,10 @@ in {
 			telescope-nvim
 			nvim-treesitter.withAllGrammars
 			blink-cmp
+			conform-nvim
 		    ];
-		    vimExtras = with pkgs; [
-		    ];
+		    # vimExtras = with pkgs; [
+		    # ];
 		};
 	    });
 

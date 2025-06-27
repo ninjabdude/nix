@@ -1,5 +1,6 @@
 vim.lsp.enable({
     "lua_ls",
+    "nixd",
 })
 
 vim.api.nvim_create_autocmd("LspAttach", {
