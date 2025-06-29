@@ -6,7 +6,7 @@
 	../configs/starship.nix
 	../configs/fzf.nix
 	../configs/zoxide.nix
-	../configs/sesh.nix
+	# ../configs/sesh.nix
 	# ../configs/ghostty/ghostty.nix
 	../configs/wezterm/wezterm.nix
 	../configs/nvim/nvim.nix
