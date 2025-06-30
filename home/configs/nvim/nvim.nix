@@ -65,7 +65,7 @@ in {
 			nvim-web-devicons
 			friendly-snippets
 			nvim-treesitter-context
-
+			vim-tmux-navigator
 		    ];
 		};
 
