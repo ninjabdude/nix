@@ -30,5 +30,6 @@ bindkey -M emacs '^f' sesh-sessions
 bindkey -M vicmd '^f' sesh-sessions
 bindkey -M viins '^f' sesh-sessions
 
+export MANPAGER='svim +Man!'
 
 # eval "$(zoxide init --cmd cd zsh)"
