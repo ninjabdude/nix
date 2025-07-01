@@ -14,9 +14,11 @@ return {
             --     }
             -- end,
             formatters_by_ft = {
+		c = {"clang-format"},
                 lua = { "stylua" },
-                -- go = { "goimports", "gofumpt" },
-                -- zig = { "zigfmt" },
+		nix = {"alejandra"},
+                go = {"gofmt"},
+                zig = { "zigfmt" },
             },
         })
         require("conform").formatters.stylua = {

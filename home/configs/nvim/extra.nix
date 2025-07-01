@@ -18,6 +18,8 @@
 	git
 	curl
 	gcc
+	clang-tools
+	zig
 	lua
 	go
 	rustup
