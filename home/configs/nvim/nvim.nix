@@ -64,6 +64,7 @@ in {
             lua-language-server
             stylua
             zls
+	    # vhdl-ls
           ];
         };
 
