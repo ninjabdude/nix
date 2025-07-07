@@ -6,6 +6,9 @@ vim.lsp.enable({
     "gopls",
 })
 
+vim.diagnostic.config({
+  virtual_lines = { current_line = true }
+})
 vim.api.nvim_create_autocmd("LspAttach", {
 		group = vim.api.nvim_create_augroup("kickstart-lsp-attach", { clear = true }),
 		callback = function(event)
