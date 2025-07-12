@@ -15,6 +15,8 @@
 
 
     home.packages = with pkgs; [
+	jq
+	ripgrep
 	wget
 	git
 	curl

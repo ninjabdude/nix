@@ -1,5 +1,5 @@
 
-
+vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.number = true
 vim.opt.relativenumber = true
@@ -18,6 +18,13 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     vim.highlight.on_yank()
   end,
 })
+
+-- see help sticky keys 
+vim.cmd([[command! W w]])
+vim.cmd([[command! Wa wa]])
+vim.cmd([[command! Wq wq]])
+vim.cmd([[command! WQ wq]])
+vim.cmd([[command! Q q]])
 
 -- write quit all
 vim.keymap.set("n", "ZA", "<cmd>wqa<CR>")

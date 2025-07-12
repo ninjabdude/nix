@@ -99,6 +99,8 @@ in {
             nvim-treesitter.withAllGrammars
             blink-cmp
             conform-nvim
+	    nvim-scissors
+	    luasnip
           ];
           # vimExtras = with pkgs; [
           # ];

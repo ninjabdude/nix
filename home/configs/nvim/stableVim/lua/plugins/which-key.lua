@@ -15,6 +15,7 @@ return { -- Useful plugin to show you pending keybinds.
 		{ "<leader>h", group = "Git [H]unk", mode = { "n", "v" } },
 		{ "s", group = "s" },
 		{ "gc", group = "[C]omment" },
+		{ "<leader>x", group = "Snippet" },
 	    })
 	end,
 }
