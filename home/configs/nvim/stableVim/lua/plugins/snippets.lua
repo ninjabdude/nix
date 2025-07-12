@@ -1,13 +1,19 @@
 return {
     {
         "luasnip",
+        after = function()
+            require("luasnip.loaders.from_vscode").lazy_load({
+                paths = { vim.fn.stdpath("config") .. "/snippets" }
+            })
+        end,
     },
     {
         "nvim-scissors",
         after = function()
             require("scissors").setup({
+                snippetDir = vim.fn.stdpath("config") .. "/snippets",
                 jsonFormatter = "jq",
-            }) --nolint 
+            })
 
             vim.keymap.set("n", "<leader>xe", function()
                 require("scissors").editSnippet()

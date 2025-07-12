@@ -1,0 +1,6 @@
+{
+  "tok": {
+    "body": "{token.$1 test, \"$2\"},",
+    "prefix": "tok"
+  }
+}

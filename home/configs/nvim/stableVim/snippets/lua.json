@@ -1,1 +1,10 @@
-{}
+{
+  "after": {
+    "body": [
+      "after = function()",
+      "\t$1",
+      "end,"
+    ],
+    "prefix": "after"
+  }
+}
