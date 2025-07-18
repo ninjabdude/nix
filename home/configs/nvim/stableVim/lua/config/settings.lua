@@ -8,6 +8,7 @@ vim.opt.undofile = true -- Save undo history
 vim.g.mapleader = " "
 vim.o.scrolloff = 10
 vim.o.colorcolumn = "80"
+vim.o.signcolumn = "yes"
 -- Highlight when yanking (copying) text
 --  Try it with `yap` in normal mode
 --  See `:help vim.highlight.on_yank()`

@@ -1,6 +1,14 @@
 {
+  "tc": {
+    "body": [
+      "case '$1':",
+      "\ttok = newToken(token.$2, l.ch)",
+      "$3"
+    ],
+    "prefix": "tt"
+  },
   "tok": {
-    "body": "{token.$1 test, \"$2\"},",
+    "body": "{token.$1, \"$2\"},",
     "prefix": "tok"
   }
 }
